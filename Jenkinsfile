@@ -59,7 +59,10 @@ pipeline {
 
         stage("run"){
             steps{
-                sh "docker run -dt -p 8084:8081 vigneshwar1908/insurance-practice:v1"
+                ansibleplaybook credentialsId: 'ansible-ssh',
+                installation: 'ansible',
+                inventory: '/etc/ansible/hosts', 
+                playbook: 'ansible-playbook.yml', vaultTmpPath: ''
             }
         }
     }
