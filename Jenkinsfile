@@ -59,7 +59,7 @@ pipeline {
 
         stage("run"){
             steps{
-                sh "docker run -dt -p 8080:8082 --name insuranceapp vigneshwar1908/insurance-practice:v1"
+                sh "docker run -dt -p 8082:8082 --name insuranceapp vigneshwar1908/insurance-practice:v1"
             }
         }
     }
