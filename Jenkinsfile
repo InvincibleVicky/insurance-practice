@@ -40,7 +40,7 @@ pipeline {
 
         stage("docker image creation"){
             steps{
-                sh "docker built -t vigneshwar1908/insurance-practice:v1 ."
+                sh "docker build -t vigneshwar1908/insurance-practice:v1 ."
             }
         }
 
